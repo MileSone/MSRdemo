@@ -1,0 +1,56 @@
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+-->
+<div id="login_page" class="oj-hybrid-applayout-page demo-loan-page loginBG">
+    <!-- This is where your main page content will be loaded -->
+    <div class="oj-applayout-content">
+        <div role="main" class="oj-hybrid-applayout-content">
+            <div class="oj-hybrid-padding">
+                <!-- Login  -->
+                <div class="demo-loan-login-center centerText">
+                    <div class="oj-flex">
+                        <div class="oj-flex-item oj-sm-12  firstMargin login_title">
+                            찜!딱!
+                        </div>
+
+                        <div class="oj-flex-item oj-sm-10 secMargin login_title login_words leftText">
+                            Username
+                        </div>
+
+                        <div class="oj-flex-item oj-sm-10 centerSelf">
+                            <input class="demo-loan-login-input" id="text-input"
+                                   type="text"
+                                   data-bind="ojComponent: {component: 'ojInputText',
+                                               placeholder: oj.Translations.getTranslatedString('user'),
+                                          value: username}" >
+                        </div>
+
+                        <div class="oj-flex-item oj-sm-10 secMargin login_words leftText">
+                            Password
+                        </div>
+                        <div class="oj-flex-item oj-sm-10 centerSelf">
+                            <input type="password" class="demo-loan-login-input"
+                                   id="password"
+                                   data-bind="ojComponent: {component: 'ojInputPassword', 
+                                          placeholder: oj.Translations.getTranslatedString('password'),
+                                          value: password}"/>
+                        </div>
+
+                        <div class="oj-flex-item oj-sm-10 triMargin login_title login_words rightText centerSelf" data-bind="click: fgetpAction">
+                            Reset password
+                        </div>
+                        <br/>
+
+                        <div id='buttons-container' class="secMargin oj-flex-item oj-sm-12">
+                            <input id="submit" type="submit" data-bind="click: loginAction, 
+                              ojComponent: {component: 'ojButton', label: oj.Translations.getTranslatedString('login'), chroming: 'full'},
+                              css: 'login-btn'"/>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

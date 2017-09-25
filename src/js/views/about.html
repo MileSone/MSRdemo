@@ -1,0 +1,38 @@
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-padding">
+  <h3>로그인시 사용할 이메일 : </h3>
+
+<div class="oj-hybrid-padding">
+<div class="oj-flex oj-row">
+  <div style="display:inline-block; padding-right: 1px;" class="oj-sm-10 oj-col">
+
+    <input id="text-input"
+           type="text"
+           data-bind="ojComponent: {component: 'ojInputText',
+           value:currentValue,
+           optionChange: optionChangeCallback}"/>
+         </div>
+
+           <div style="display:inline-block; padding-right: 0px;" class="oj-sm-2 oj-col">
+
+             <button id="buttonId1" data-bind="ojComponent: {
+                 component: 'ojButton',
+                 disabled: buttonDisabled,
+                 label: '확인'},
+                 click: submitInput">
+             </button>
+           </div>
+
+         </div>
+       </div>
+     </div>
+
+</br>
+    <!--span  class="oj-label">현재 사용중인 이메일 주소: </span>
+    <span id="curr-value" data-bind="text: currentValue"></span>
+    <br/-->
+
+</div>

@@ -101,3 +101,252 @@
     font-weight: normal;
     width: 100%;
 }
+
+
+.oj-web-applayout-footer {
+    min-height: 3.571rem; 
+    box-sizing: border-box; 
+    border-top: 1px solid #d5dfe5; 
+    background-color: #ececec;
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+.oj-navigationlist-horizontal .oj-navigationlist-item-element {
+    box-sizing: border-box;
+    min-height: 0rem; 
+    height: 39px;
+}
+
+
+.nav-home-icon{
+    content:url("images/Home1_icon.png");
+    height: 30px;
+}
+
+
+.oj-selected .nav-home-icon {
+    content:url("images/Home_icon.png");
+    height: 30px;
+}
+
+.nav-cata-icon{
+    content:url("images/History1_icon.png");
+    height: 30px;
+}
+
+
+.oj-selected .nav-cata-icon {
+    content:url("images/History_icon.png");
+    height: 30px;
+}
+
+.nav-person-icon{
+    content:url("images/Me1_icon.png");
+    height: 30px;
+}
+
+
+.demo-back-btn{
+    content:url("images/back_btn.png");
+}
+
+
+
+
+.back_position{
+    position:absolute;
+    top:20px;
+    left:20px;
+}
+
+
+
+.oj-selected .nav-person-icon {
+    content:url("images/Me_icon.png");
+    height: 30px;
+}
+
+.oj-web-applayout-header {
+    background-color: #e10000;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.oj-web-applayout-header-title {
+    font-size: 1.25rem;
+    font-weight: normal;
+    color: #fff;
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+
+#dashView{
+    overflow-y: scroll;
+}
+
+#dashView .oj-form-control {
+    margin: auto;
+    width: 40px;
+    position: absolute;
+    right: 20px;
+    padding-top: 10px;
+}
+
+#dashView .topSession{
+    border-bottom: 1px solid gray;
+    padding-bottom: 13px;
+    position: relative;
+}
+
+#dashView .seat1{
+    background-color: #ececec;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+    margin-top: 7px;
+}
+
+#dashView .seatWords{
+    margin: 0 auto;
+    display: inline-block;
+}
+
+
+#inputButton {
+    color: white;
+    border-radius: 6px;
+    height: 42px;
+    max-width: 83.3333333333%;
+    width: 83.3333333333%;
+    border-color:  #d40f0f !important;
+    background: #d40f0f !important;
+}
+
+
+#inputButton .oj-active{
+    color: white;
+    border-radius: 6px;
+    height: 42px;
+    max-width: 83.3333333333%;
+    width: 83.3333333333%;
+    border-color:  #860808 !important;
+    background: #860808 !important;
+}
+
+#dashView .buttonLayout{
+    margin: 14px 0px 70px 0px;
+}
+
+#dashView #chat-container{
+    position: relative;
+    left: 20px;
+}
+
+.seatNum{
+    color: #e10000;
+    font-weight: 600;
+}
+
+.numBlock div{
+    height:28px;
+    line-height: 28px;
+}
+
+#aboutView .listView{
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+    min-height: 100px;
+}
+
+#aboutView .listCell{
+    position: relative;
+}
+
+#aboutView #buttonId1{
+    position: absolute;
+    right: 10px;
+    margin-top: 4px;
+    color: #e10000;
+}
+
+#aboutView .addCell{
+    padding-top: 10px;
+}
+
+#aboutView .oj-button-jqui.oj-active{
+    background-color: #e10000;
+    color:white !important;
+}
+
+
+.demo-person-icon{
+    content:url("images/user_icon.png");
+}
+
+.demo-add-icon{
+    content:url("images/user_add.png");
+}
+
+
+#aboutView .oj-icon {
+    display: inline-block;
+    width: 30px;
+    height:30px;
+    line-height: 1;
+    overflow: hidden;
+    direction: ltr;
+    text-align: center;
+    box-sizing: content-box;
+}
+
+
+#headerNavBarH .oj-icon {
+    display: inline-block;
+    width: 30px;
+    height:30px;
+    line-height: 1;
+    overflow: hidden;
+    direction: ltr;
+    text-align: center;
+    box-sizing: content-box;
+}
+
+#buttonId2 , #buttonId3{
+    display: inline-block;
+}
+
+
+#forgetpass_page .oj-inputtext-input, .oj-inputpassword-input, .oj-textarea-input, .oj-inputtext-nocomp, .oj-inputpassword-nocomp, .oj-textarea-nocomp {
+    color: #fff;
+}
+
+
+#back_btn{
+    background-color: transparent;
+    background-image: none;
+    border:none;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    text-shadow: none;
+      height: 40px;
+    width: 100%;
+    margin: 0px 0px 0px 1px;
+}
+
+
+.oj-fp-icon {
+    display: inline-block;
+    width: 16px;
+    height: 30px;
+    line-height: 1;
+    overflow: hidden;
+    direction: ltr;
+    text-align: center;
+    box-sizing: content-box;
+}

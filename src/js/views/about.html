@@ -1,38 +1,54 @@
 <!--
  Copyright (c) 2014, 2017, Oracle and/or its affiliates.
  The Universal Permissive License (UPL), Version 1.0
- -->
-<div class="oj-hybrid-padding">
-  <h3>로그인시 사용할 이메일 : </h3>
-
-<div class="oj-hybrid-padding">
-<div class="oj-flex oj-row">
-  <div style="display:inline-block; padding-right: 1px;" class="oj-sm-10 oj-col">
-
-    <input id="text-input"
-           type="text"
-           data-bind="ojComponent: {component: 'ojInputText',
-           value:currentValue,
-           optionChange: optionChangeCallback}"/>
-         </div>
-
-           <div style="display:inline-block; padding-right: 0px;" class="oj-sm-2 oj-col">
-
-             <button id="buttonId1" data-bind="ojComponent: {
+-->
+<div class="oj-hybrid-padding" id="aboutView">
+    <div class="oj-flex oj-flex-items-pad listView">
+        <div class="oj-sm-12 oj-flex-item">
+            <h3>로그인시 사용할 이메일 : </h3>
+        </div>
+        <div class="oj-sm-8 oj-flex-item">
+            <h3 data-bind="text:currentValue"></h3>
+        </div>
+        <div class="oj-sm-4 oj-flex-item listCell">
+            <button id="buttonId1" data-bind="click: submitInput, ojComponent: {
                  component: 'ojButton',
                  disabled: buttonDisabled,
-                 label: '확인'},
-                 click: submitInput">
-             </button>
-           </div>
+                 label: '확인'}
+                    ">
+            </button>
+        </div>
+    </div>
 
-         </div>
-       </div>
-     </div>
+    <div class="oj-flex oj-flex-items-pad listView">
+        <div class="oj-sm-12 oj-flex-item addCell">
+            <button id="buttonId2" data-bind="click: creatFB, ojComponent: {
+                 component: 'ojButton',
+                 label: 'Facebook account',
+                 display: 'icons',icons: {start:'oj-fp-icon oj-icon demo-add-icon'}
+                 }
+                    ">
+            </button>
+            <span>Facebook account</span>
+        </div>
+        <div class="oj-sm-8 oj-flex-item">
 
-</br>
-    <!--span  class="oj-label">현재 사용중인 이메일 주소: </span>
-    <span id="curr-value" data-bind="text: currentValue"></span>
-    <br/-->
+        </div>
+    </div>
 
+    <div class="oj-flex oj-flex-items-pad listView">
+        <div class="oj-sm-12 oj-flex-item addCell">
+            <button id="buttonId3" data-bind="click: creatTN, ojComponent: {
+                 component: 'ojButton',
+                 display: 'icons',icons: {start:'oj-fp-icon oj-icon demo-add-icon'},
+                 label: 'Team name'}
+                    ">
+            </button>
+            <span>Team name</span>
+        </div>
+        <div class="oj-sm-8 oj-flex-item">
+
+        </div>
+    </div>
 </div>
+

@@ -50,8 +50,8 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'appController',
                 };
 
                 self.fgetpAction = function () {
-                    console.log('clicked');
-                }
+                    oj.Router.rootInstance.go('forgetPass');
+                };
 
 
                 self.login = function (authUsername, authPassword, flager) {

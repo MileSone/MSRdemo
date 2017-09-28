@@ -1,0 +1,78 @@
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+-->
+<div id="forgetpass_page" class="oj-hybrid-applayout-page demo-loan-page loginBG">
+    <!-- This is where your main page content will be loaded -->
+    <div class="oj-applayout-content">
+        <div role="main" class="oj-hybrid-applayout-content">
+            <div class="oj-hybrid-padding">
+                <!-- Login  -->
+                <div class="back_position">
+                    <button id="back_btn" data-bind="click: backAction, ojComponent: {component: 'ojButton', display: 'icons',icons: {start:'oj-fp-icon demo-back-btn'}, chroming: 'full'},css: 'demo-fp-icon_style'"/>
+                </div>
+
+                <div class="demo-loan-login-center centerText">
+                    <div class="oj-flex">
+                        <div class="oj-flex-item oj-sm-12  firstMargin login_title">
+                            찜!딱!
+                        </div>
+
+                        <div class="oj-flex-item oj-sm-10 secMargin login_title login_words leftText">
+                            Email
+                        </div>
+
+                        <div class="oj-flex-item oj-sm-10 centerSelf">
+                            <input class="demo-loan-login-input" id="text-input"
+                                   type="text"
+                                   data-bind="ojComponent: {component: 'ojInputText',
+                                               placeholder: oj.Translations.getTranslatedString('email'),
+                                          value: emailInput}" >
+                        </div>
+
+                        <div class="oj-flex-item oj-sm-10 secMargin login_words leftText">
+                            Old Password
+                        </div>
+                        <div class="oj-flex-item oj-sm-10 centerSelf">
+                            <input type="password" class="demo-loan-login-input"
+                                   id="password"
+                                   data-bind="ojComponent: {component: 'ojInputPassword', 
+                                          placeholder: oj.Translations.getTranslatedString('password'),
+                                          value: oldPassword}"/>
+                        </div>
+
+                        <div class="oj-flex-item oj-sm-10 secMargin login_words leftText">
+                            New Password
+                        </div>
+                        <div class="oj-flex-item oj-sm-10 centerSelf">
+                            <input type="password" class="demo-loan-login-input"
+                                   id="password"
+                                   data-bind="ojComponent: {component: 'ojInputPassword', 
+                                          placeholder: oj.Translations.getTranslatedString('password'),
+                                          value: NewPassword_one}"/>
+                        </div>
+
+                        <div class="oj-flex-item oj-sm-10 secMargin login_words leftText">
+                            Confirm New Password 
+                        </div>
+                        <div class="oj-flex-item oj-sm-10 centerSelf">
+                            <input type="password" class="demo-loan-login-input"
+                                   id="password"
+                                   data-bind="ojComponent: {component: 'ojInputPassword', 
+                                          validators: comfirmValidator,
+                                          placeholder: oj.Translations.getTranslatedString('password'),
+                                          value: NewPassword_two}"/>
+                        </div>
+
+                        <div id='buttons-container' class="secMargin oj-flex-item oj-sm-12">
+                            <input id="submit" type="submit" data-bind="click: ChangePassAction, 
+                              ojComponent: {component: 'ojButton', label: oj.Translations.getTranslatedString('Change Password'), chroming: 'full'},
+                              css: 'login-btn'"/>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -15,8 +15,12 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
                     var booValue = $('#headerNavBar').hasClass('hiddenNav');
                     if (booValue) {
                         $('#headerNavBar').removeClass('hiddenNav');
+                        $('#headerNavBarH').removeClass('hiddenNav');
+                        console.log("show");
                     } else {
                         $('#headerNavBar').addClass('hiddenNav');
+                         $('#headerNavBarH').addClass('hiddenNav');
+                          console.log("hjde");
                     }
                 };
 
@@ -31,6 +35,7 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
                     'dashboard': {label: '나의예약'},
                     'incidents': {label: '예약하기'},
                     'login': {label: 'login', isDefault: true},
+                     'forgetPass': {label: 'Forget Password'},
                     //  'customers': {label: '예약취소'},
                     'about': {label: 'Chat'}
                 });
@@ -40,13 +45,13 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
                 // Navigation setup
                 var navData = [
                     {name: '예약하기', id: 'dashboard',
-                        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-home-icon-24'},
+                        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 nav-home-icon'},
                     {name: '히스토리', id: 'incidents',
-                        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-catalog-icon-24'},
+                        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 nav-cata-icon'},
                     // {name: '예약취소', id: 'customers',
                     //  iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-garbage-icon-24'},
                     {name: 'Chat', id: 'about',
-                        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-person-icon-24'}
+                        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 nav-person-icon'}
                 ];
                 self.navDataSource = new oj.ArrayTableDataSource(navData, {idAttribute: 'id'});
                 //

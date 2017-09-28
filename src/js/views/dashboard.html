@@ -1,46 +1,47 @@
 <!--
    Copyright (c) 2014, 2017, Oracle and/or its affiliates.
    The Universal Permissive License (UPL), Version 1.0
-   -->
-<div class="oj-hybrid-padding">
-  <div class="oj-flex oj-row">
-    <h2>안녕하세요,</h2>
-  </div>
+-->
+<div class="oj-hybrid-padding" id="dashView">
+    <div class="oj-flex oj-row">
 
-
-    <div class="oj-flex-item">
-      <span data-bind="text: dateForCalender"></span>
-
-<label>의 "딱!"앉으실 자리를 보여드릴께요</label>
-<input id="date" data-bind="ojComponent:
+        <div class="oj-flex-item topSession">
+            <h2 style="width: 160px;display: inline-block;">안녕하세요,</h2>
+            <input id="date" data-bind="ojComponent:
     {component: 'ojInputDate',value: dateForCalender, optionChange : updateAfterDateChanged, min: minDate}"
-    style="align: left; height:20px;"/>
+                   style="text-align: right;width: 44px;display: inline-block;"/>
 
-<div class="oj-flex oj-row">
-  <button id="inputButton" style="float:left;color:#737373;font-weight:bolder;" class="oj-button-sm"
-          data-bind="click: buttonClick,ojComponent: {
-              component:'ojButton',
-              icons: {end:'oj-fwk-icon-next oj-fwk-icon'},
-              label: '예약 생성'
-          }"></button>
+            <div style="padding-top: 10px;padding-bottom: 6px;"><span data-bind="text: dateForCalender"></span><label>의 "딱!"앉으실 자리를 보여드릴께요</label></div>
+        </div>
 
-  <label id="currentText" style="float:left;color:#737373;font-weight:bolder;"></label>
-  <label id="currentText2" style="padding-left:8px;float:left;color:#737373;font-weight:bold;"></label>
+        <div class="oj-flex-item centerText">
+            <div class="seatWords">
+                <label id="currentText" style="float:left;color:#737373;font-weight:bolder;"></label>
+                <label id="currentText2" style="padding-left:8px;float:left;color:#737373;font-weight:bold;"></label>
 
-</div>
+            </div>
 
 
-<!--input id="inputButton" type="button"
-       data-bind="click: buttonClick,
-                  ojComponent: {component: 'ojButton', label: '새로운 예약 생성'}"/-->
+            <!--input id="inputButton" type="button"
+                   data-bind="click: buttonClick,
+                              ojComponent: {component: 'ojButton', label: '새로운 예약 생성'}"/-->
 
 
-<div id='chart-container'>
+            <div id='chart-container'>
+                <div class="oj-flex oj-row">
+                    <div style="display:inline-block; padding-right: 3px;" class="oj-sm-1 oj-col  numBlock">
+                        <div></div>
+                    </div>
+                    <div class="oj-flex-item stat1 oj-sm-8 seat1">캔틴 </div>
+                </div>
 
-   <div class="oj-flex-item stat1 oj-sm-8" style="background-color:#ececec;font-weight:bold;text-align: center;">캔틴 </div>
-      <div class="oj-flex oj-row">
-         <div style="display:inline-block; padding-right: 3px;" class="oj-sm-4 oj-col">
-            <div id='pictochart1' data-bind="ojComponent:{
+                <div class="oj-flex oj-row">
+                    <div style="display:inline-block; padding-right: 3px;" class="oj-sm-1 oj-col  numBlock">
+                        <div>1</div>
+                        <div>2</div>
+                    </div>
+                    <div style="display:inline-block; padding-right: 3px;" class="oj-sm-4 oj-col">
+                        <div id='pictochart1' data-bind="ojComponent:{
                component: 'ojPictoChart',
                items: pictoChartItems1_1,
                selectionMode: selectionValue,
@@ -51,11 +52,11 @@
                optionChange: picto1Listener,
                tooltip: {renderer: tooltipFunction}
                }"
-               style="width:100%;">
-            </div>
-         </div>
-         <div style="display:inline-block; padding-right: 0px;" class="oj-sm-4 oj-col">
-            <div id='pictochart1' data-bind="ojComponent:{
+                             style="width:100%;">
+                        </div>
+                    </div>
+                    <div style="display:inline-block; padding-right: 0px;" class="oj-sm-4 oj-col">
+                        <div id='pictochart1' data-bind="ojComponent:{
                component: 'ojPictoChart',
                items: pictoChartItems1_2,
                selectionMode: selectionValue,
@@ -67,27 +68,32 @@
                tooltip: {renderer: tooltipFunction}
 
                }"
-               style="width:100%;"></div>
-         </div>
-         <!--div id="legend1" data-bind="ojComponent: {
-             component: 'ojLegend',
-             orientation: 'vertical',
-             sections: legendSections,
-             vAlign: 'top',
-             hAlign: 'end'
-             }"
-              style="clear:both; height:60px;" >
-         </div-->
+                             style="width:100%;"></div>
+                    </div>
+                    <!--div id="legend1" data-bind="ojComponent: {
+                        component: 'ojLegend',
+                        orientation: 'vertical',
+                        sections: legendSections,
+                        vAlign: 'top',
+                        hAlign: 'end'
+                        }"
+                         style="clear:both; height:60px;" >
+                    </div-->
 
 
 
-      </div>
+                </div>
 
-      <br/>
-      <div>
-         <div class="oj-flex oj-sm-flex-items-initial oj-flex-items-pad">
-            <div style="display:inline-block; padding-right: 3px;" class="oj-sm-4 oj-col">
-               <div id='pictochart1' data-bind="ojComponent:{
+                <br/>
+                <div>
+
+                    <div class="oj-flex oj-sm-flex-items-initial oj-flex-items-pad">
+                        <div style="display:inline-block; padding-right: 3px;" class="oj-sm-1 oj-col  numBlock">
+                            <div>3</div>
+                            <div>4</div>
+                        </div>
+                        <div style="display:inline-block; padding-right: 3px;" class="oj-sm-4 oj-col">
+                            <div id='pictochart1' data-bind="ojComponent:{
                   component: 'ojPictoChart',
                   items: pictoChartItems2_1,
                   selectionMode: selectionValue,
@@ -99,11 +105,11 @@
                   tooltip: {renderer: tooltipFunction}
 
                   }"
-                  style="width:100%;">
-               </div>
-            </div>
-            <div style="display:inline-block; padding-right: 3px;" class="oj-sm-4 oj-col">
-               <div id='pictochart1' data-bind="ojComponent:{
+                                 style="width:100%;">
+                            </div>
+                        </div>
+                        <div style="display:inline-block; padding-right: 3px;" class="oj-sm-4 oj-col">
+                            <div id='pictochart1' data-bind="ojComponent:{
                   component: 'ojPictoChart',
                   items: pictoChartItems2_2,
                   selectionMode: selectionValue,
@@ -114,15 +120,20 @@
                   columnWidth: 28, rowHeight: 28,
                   optionChange: picto1Listener
                   }"
-                  style="width:100%;"></div>
-            </div>
-         </div>
-      </div>
-   <br/>
-   <div>
-      <div class="oj-flex oj-sm-flex-items-initial oj-flex-items-pad">
-         <div style="display:inline-block; padding-right: 3px;" class="oj-sm-4 oj-col">
-            <div id='pictochart1' data-bind="ojComponent:{
+                                 style="width:100%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div>
+
+                    <div class="oj-flex oj-sm-flex-items-initial oj-flex-items-pad">
+                        <div style="display:inline-block; padding-right: 3px;" class="oj-sm-1 oj-col  numBlock">
+                            <div>5</div>
+                            <div>6</div>
+                        </div>
+                        <div style="display:inline-block; padding-right: 3px;" class="oj-sm-4 oj-col">
+                            <div id='pictochart1' data-bind="ojComponent:{
                component: 'ojPictoChart',
                items: pictoChartItems3_1,
                selectionMode: selectionValue,
@@ -134,11 +145,11 @@
                tooltip: {renderer: tooltipFunction}
 
                }"
-               style="width:100%;">
-            </div>
-         </div>
-         <div style="display:inline-block; padding-right: 3px;" class="oj-sm-4 oj-col">
-            <div id='pictochart1' data-bind="ojComponent:{
+                                 style="width:100%;">
+                            </div>
+                        </div>
+                        <div style="display:inline-block; padding-right: 3px;" class="oj-sm-4 oj-col">
+                            <div id='pictochart1' data-bind="ojComponent:{
                component: 'ojPictoChart',
                items: pictoChartItems3_2,
                selectionMode: selectionValue,
@@ -150,10 +161,10 @@
                tooltip: {renderer: tooltipFunction}
 
                }"
-               style="width:100%;"></div>
-         </div>
-         <div style="display:inline-block; padding-right: 0px;" class="oj-sm-2 oj-col">
-            <div id='pictochart1' data-bind="ojComponent:{
+                                 style="width:100%;"></div>
+                        </div>
+                        <div style="display:inline-block; padding-right: 0px;" class="oj-sm-2 oj-col">
+                            <div id='pictochart1' data-bind="ojComponent:{
                component: 'ojPictoChart',
                items: pictoChartItems3_3,
                selectionMode: selectionValue,
@@ -165,16 +176,20 @@
                tooltip: {renderer: tooltipFunction}
 
                }"
-               style="width:100%;">
-            </div>
-         </div>
-      </div>
-   </div>
-   <br/>
-   <div>
-      <div class="oj-flex oj-sm-flex-items-initial oj-flex-items-pad">
-        <div style="display:inline-block; padding-right: 3px;" class="oj-sm-4 oj-col">
-           <div id='pictochart1' data-bind="ojComponent:{
+                                 style="width:100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div>
+                    <div class="oj-flex oj-sm-flex-items-initial oj-flex-items-pad">
+                        <div style="display:inline-block; padding-right: 3px;" class="oj-sm-1 oj-col  numBlock">
+                            <div>7</div>
+                            <div>8</div>
+                        </div>
+                        <div style="display:inline-block; padding-right: 3px;" class="oj-sm-4 oj-col">
+                            <div id='pictochart1' data-bind="ojComponent:{
               component: 'ojPictoChart',
               items: pictoChartItems4_1,
               selectionMode: selectionValue,
@@ -186,10 +201,10 @@
               tooltip: {renderer: tooltipFunction}
 
               }"
-              style="width:100%;"></div>
-        </div>
-         <div style="display:inline-block; padding-right: 3px;" class="oj-sm-4 oj-col">
-            <div id='pictochart1' data-bind="ojComponent:{
+                                 style="width:100%;"></div>
+                        </div>
+                        <div style="display:inline-block; padding-right: 3px;" class="oj-sm-4 oj-col">
+                            <div id='pictochart1' data-bind="ojComponent:{
                component: 'ojPictoChart',
                items: pictoChartItems4_2,
                selectionMode: selectionValue,
@@ -202,11 +217,11 @@
                tooltip: {renderer: tooltipFunction}
 
                }"
-               style="width:100%;"></div>
+                                 style="width:100%;"></div>
 
-         </div>
-         <div style="display:inline-block; padding-right: 0px;" class="oj-sm-2 oj-col">
-            <div id='pictochart1' data-bind="ojComponent:{
+                        </div>
+                        <div style="display:inline-block; padding-right: 0px;" class="oj-sm-2 oj-col">
+                            <div id='pictochart1' data-bind="ojComponent:{
                component: 'ojPictoChart',
                items: pictoChartItems4_3,
                selectionMode: selectionValue,
@@ -219,15 +234,18 @@
 
                optionChange: picto1Listener
                }"
-               style="width:100%;">
-            </div>
-         </div>
-      </div>
-      <br/>
+                                 style="width:100%;">
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
 
-      <div class="oj-flex oj-sm-flex-items-initial oj-flex-items-pad">
-         <div style="display:inline-block; padding-right: 3px;" class="oj-sm-4 oj-col">
-            <div id='pictochart1' data-bind="ojComponent:{
+                    <div class="oj-flex oj-sm-flex-items-initial oj-flex-items-pad">
+                        <div style="display:inline-block; padding-right: 3px;" class="oj-sm-1 oj-col  numBlock">
+                            <div>9</div>
+                        </div>
+                        <div style="display:inline-block; padding-right: 3px;" class="oj-sm-4 oj-col">
+                            <div id='pictochart1' data-bind="ojComponent:{
                component: 'ojPictoChart',
                items: pictoChartItems5_1,
                selectionMode: selectionValue,
@@ -239,13 +257,13 @@
                tooltip: {renderer: tooltipFunction}
 
                }"
-               style="width:80%;">
-            </div>
-            <div class="oj-flex-item stat1" style="background-color:#ececec;padding-left: 1%;border-radius:3px;text-align: center;max-width:90px">강우진전무님</div>
+                                 style="width:80%;">
+                            </div>
+                            <div class="oj-flex-item stat1" style="background-color:#ececec;padding-left: 1%;border-radius:3px;text-align: center;max-width:110px">강우진전무님</div>
 
-         </div>
-         <div style="display:inline-block; padding-right: 0px;"class="oj-sm-4 oj-col">
-            <div id='pictochart1' data-bind="ojComponent:{
+                        </div>
+                        <div style="display:inline-block; padding-right: 0px;" class="oj-sm-4 oj-col">
+                            <div id='pictochart1' data-bind="ojComponent:{
                component: 'ojPictoChart',
                items: pictoChartItems5_2,
                selectionMode: selectionValue,
@@ -258,15 +276,25 @@
                tooltip: {renderer: tooltipFunction}
 
                }"
-               style="width:100%;"></div>
-               <div class="oj-flex-item stat1" style="background-color:#ececec;padding-left: 1%;border-radius:3px;text-align: center;max-width:90px">심명종전무님</div>
+                                 style="width:100%;"></div>
+                            <div class="oj-flex-item stat1" style="background-color:#ececec;padding-left: 1%;border-radius:3px;text-align: center;max-width:110px">심명종전무님</div>
 
-         </div>
+                        </div>
 
-      </div>
-   </div>
-</div>
-<div style="height:45px;">
-</br>
+                    </div>
+                </div>
 
+
+            </div>
+
+
+            <div class="buttonLayout">
+                <button id="inputButton" class="oj-button-sm"
+                        data-bind="click: buttonClick,ojComponent: {
+              component:'ojButton',
+              label: '> 예약 생성'
+          }"></button>
+            </div>
+        </div>
+    </div>
 </div>

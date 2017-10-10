@@ -61,7 +61,7 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
                 self.appName = ko.observable("찜!딱!");
                 self.router.go('login');
                 self.userLogin = ko.observable("sung.hye.jeon@oracle.com");
-
+                self.Authorization = "";
 // Header Setup
                 self.getHeaderModel = function () {
                     var headerFactory = {

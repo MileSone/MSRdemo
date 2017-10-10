@@ -16,8 +16,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'appController',
                 self.password = ko.observable("welcome1");
                 // Header Config
                 self.headerConfig = {'viewName': 'header', 'viewModelFactory': app.getHeaderModel()};
-                var storageUsername;
-                var storagePassword;
+
                 // Below are a subset of the ViewModel methods invoked by the ojModule binding
                 // Please reference the ojModule jsDoc for additionaly available methods.
 
@@ -26,13 +25,14 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'appController',
                 var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
 
                 self.loginSuccess = function (response) {
+                    console.log("self.username", self.username());
+                    app.userLogin ( self.username() );
 //                    var storage = window.localStorage;
 //                    storage.setItem("ForEUsername", window.btoa(self.username()));
 //                    storage.setItem("ForEPassword", window.btoa(self.password()));
 //
 //                    console.log(response);
 //                    appVar.response = response;
-//                    mbe.isLoggedIn = true;
 //                    self.isLoggedIn(mbe.isLoggedIn);
 //                    appVar.mcsLoginUser = self.username();
 //                    appVar.mcsLoginPassword = self.password();
@@ -42,7 +42,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'appController',
                 };
 
                 self.loginFailure = function (statusCode, data) {
-                    alert("Login failed! statusCode:" + statusCode + " Message: " + JSON.stringify(data));
+                    alert("로그인의 비밀번호 아이디 조합이 맞지 않습니다." );
                 };
 
                 self.loginAction = function () {
@@ -55,34 +55,39 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'appController',
 
 
                 self.login = function (authUsername, authPassword, flager) {
-//                    $.ajax({
-//                        type: "GET",
-//                        url: self.MBE_BaseURL() + "/mobile/custom/ForEsysAPIs/loan",
-////                        data: null,
-//                        async: false,
-//                        headers: {
-//                            "oracle-mobile-backend-id": self.MBE_ID(),
-//                            "Authorization": "Basic " + window.btoa(authUsername + ":" + authPassword)
-//                        },
-//                        success: function (data) {
-//                            if (flager) {
-//                                console.log(data);
-//                                appVar.response = data;
-//                                app.isLoading(false);
-//                                oj.Router.rootInstance.go('home');
-//                            } else {
-//                                self.loginSuccess(data);
-//                            }
-//                        },
-//                        error: function (error) {
-//                            self.loginFailure(error);
-//                        },
-//                        complete: function (data) {
-//                            console.log("Login complete");
-//                        }
-//                    });
-//                    return true;
-                    self.loginSuccess();
+                    console.log("authUsername", authUsername);
+
+                   $.ajax({
+                       type: "GET",
+                       url: "http://129.150.84.190:8080/v1/reservations/findByUser?email=" + authUsername,
+                       async: false,
+                       headers: {
+                            'Content-Type' : 'application/json',
+                            'Accept' : 'application/json',
+//                            'Authorization' : 'Basic c3VuZy5oeWUuamVvbkBvcmFjbGUuY29tOndlbGNvbWUx'
+                            'Authorization' : 'Basic ' + window.btoa(authUsername + ":" + authPassword)
+                       },
+                       
+                       success: function (data) {
+                           if (flager) {
+                               console.log(data);
+                               appVar.response = data;
+                               app.isLoading(false);
+                               oj.Router.rootInstance.go('home');
+                           } else {
+                               self.loginSuccess(data);
+                           }
+                       },
+                       error: function (error) {
+                           self.loginFailure(error);
+                       },
+                       complete: function (data) {
+                           app.Authorization = 'Basic ' + window.btoa(authUsername + ":" + authPassword);
+                           console.log("Login complete");
+                       }
+                   });
+                   return true;
+                 //   self.loginSuccess();
 
                 };
                 /**

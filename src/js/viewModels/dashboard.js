@@ -82,7 +82,7 @@ function(oj, ko, $, app) {
     var headers = {
       'Content-Type' : 'application/json',
       'Accept' : 'application/json',
-      'Authorization' : 'Basic c3VuZy5oeWUuamVvbkBvcmFjbGUuY29tOndlbGNvbWUx'
+      'Authorization' : app.Authorization
     }
 
     // variable declaration ends
@@ -277,6 +277,7 @@ function(oj, ko, $, app) {
           processData: false,
           success: function(msg) {
             console.log("availableSeat", msg);
+
 
             self.availableSeat = msg;
 

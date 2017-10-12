@@ -12,8 +12,8 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'appController',
             function LoginViewModel() {
                 var self = this;
                 self.isLoggedIn = ko.observable(false);
-                self.username = ko.observable("sung.hye.jeon@oracle.com");
-                self.password = ko.observable("welcome1");
+                self.username = ko.observable("");
+                self.password = ko.observable("");
                 // Header Config
                 self.headerConfig = {'viewName': 'header', 'viewModelFactory': app.getHeaderModel()};
 
@@ -55,7 +55,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'appController',
 
 
                 self.login = function (authUsername, authPassword, flager) {
-                    console.log("authUsername", authUsername);
+                    console.log("authUsername", authUsername + ":" + authPassword);
 
                    $.ajax({
                        type: "GET",
